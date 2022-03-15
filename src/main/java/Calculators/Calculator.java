@@ -1,3 +1,5 @@
+package Calculators;
+
 public class Calculator {
     public double usn6Tax = 6.0;
     public double usn15Tax = 15.0;
@@ -25,7 +27,10 @@ public class Calculator {
         } else if (tax15 < tax6) {
             System.out.println("Для вас выгоднее УСН Доходы минус расходы, налог составит: " +
                     tax15 + " по УСН Доходы - расходы вышло бы: " + tax6);
-        } //TODO сделать сравнивание на равность
+        } else if (tax15 == tax6) {
+            System.out.println("Для вас обе системы одинаковы, итоговый налог будет равен." +
+                    " Если расходы будут увеличиваться, то лучше выбрать УСН Д-Р");
+        }
         //TODO сделать валидацию вводимых данных на выход за пределы УСН или на повышенную ставку
     }
 }
