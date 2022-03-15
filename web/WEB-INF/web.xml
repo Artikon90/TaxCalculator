@@ -12,4 +12,14 @@
         <servlet-name>profitTax</servlet-name>
         <url-pattern>/profitTax</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>calculateTax</servlet-name>
+        <servlet-class>Servlets.CalculateTaxesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>calculateTax</servlet-name>
+        <url-pattern>/calculateTax</url-pattern>
+    </servlet-mapping>
 </web-app>

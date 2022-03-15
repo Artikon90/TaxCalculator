@@ -1,7 +1,5 @@
 package Calculators;
 
-import static java.lang.System.out;
-
 public class Calculator {
     private static Calculator taxCalc = new Calculator();
     private Calculator() {
@@ -14,6 +12,10 @@ public class Calculator {
     private double expense;
     private double income;
     private String result;
+
+    public String getResult() {
+        return result;
+    }
 
     public double getExpense() {
         return expense;
@@ -34,19 +36,19 @@ public class Calculator {
     //с налоговым законодальством.
     //TODO инкапсулировать переменные
 
-    public double getTax6(double income) {
+    public double getTax6() {
         double tax6 = income * usn6Tax;
         return tax6;
     }
 
-    public double getTax15(double income, double expenses) {
-        double tax15 = (income - expenses) * usn15Tax;
+    public double getTax15() {
+        double tax15 = (income - expense) * usn15Tax;
         return tax15;
     }
 
     public void compareProfit() {
-        double tax6 = getTax6(income);
-        double tax15 = getTax15(income, expense);
+        double tax6 = getTax6();
+        double tax15 = getTax15();
         double compareResult;
         if (tax15 > tax6) {
             result = ("Для вас выгоднее УСН Доходы, налог составит: " +
@@ -59,9 +61,6 @@ public class Calculator {
                     " Если расходы будут увеличиваться, то лучше выбрать УСН Д-Р");
         }
         //TODO сделать валидацию вводимых данных на выход за пределы УСН или на повышенную ставку
-    }
-    public String getResult() {
-        return result;
     }
 }
 

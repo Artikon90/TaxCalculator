@@ -1,10 +1,4 @@
-<%@ page import="Calculators.Calculator" %><%--
-  Created by IntelliJ IDEA.
-  User: Art
-  Date: 03/15/22
-  Time: 22:43
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="Calculators.Calculator" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
